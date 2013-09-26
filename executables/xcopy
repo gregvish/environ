@@ -1,2 +1,2 @@
 #!/bin/bash
-xclip -selection clipboard -i /tmp/.my_clipboard
+cat /tmp/.my_clipboard | xclip -selection clipboard -i > /dev/null
