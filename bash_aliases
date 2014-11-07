@@ -24,3 +24,6 @@ shopt -s histappend
 
 alias secvim='vim -u NONE -i NONE'
 alias aescat='openssl aes-256-cbc'
+alias l='ls -FC'
+alias ll='ls -FCl'
+alias la='ls -FCal'
