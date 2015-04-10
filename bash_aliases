@@ -1,10 +1,14 @@
 #!/bin/bash
 stty -ixon
+set -o vi
+
+export EDITOR=vim
 
 export PATH=/opt/ctng/bin:$PATH
 export PATH=/opt/cross/mipsel-unknown-linux-uclibc/bin:$PATH
 export PATH=/opt/cross/mips-unknown-linux-uclibc/bin:$PATH
 export PATH=/opt/cross/arm-unknown-linux-uclibcgnueabi/bin:$PATH
+export PATH=/opt/cross/esp/esp/bin:$PATH
 
 export PATH=/opt/jdk/bin:/opt/jre/bin:$PATH
 export JAVA_HOME=/opt/jdk
