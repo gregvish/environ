@@ -1,6 +1,5 @@
 #!/bin/bash
 stty -ixon
-set -o vi
 
 export EDITOR=vim
 
