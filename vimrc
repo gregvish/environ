@@ -3,14 +3,20 @@ syntax on
 
 set incsearch
 set hlsearch
+set hidden
 
 set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set wildmode=longest,list
 
 set autochdir
 set tags=tags;
+
+highlight UnwantedSpaces ctermbg=red guibg=red
+match UnwantedSpaces /\s\+\%#\@<!$\|^\t\+/
+autocmd InsertLeave * redraw!
 
 if has("gui_running")
     set guioptions=

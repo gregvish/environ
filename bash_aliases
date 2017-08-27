@@ -30,3 +30,7 @@ alias aescat='openssl aes-256-cbc'
 alias l='ls -FC'
 alias ll='ls -FCl'
 alias la='ls -FCal'
+alias demsg='dmesg -T'
+
+# HIDPI scale factor
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
