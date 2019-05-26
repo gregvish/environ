@@ -25,3 +25,5 @@ endif
 let clip_file = "/tmp/.my_clipboard"
 nmap <silent> ,y :call writefile(split(@", "\n"), clip_file, "b")<CR>
 nmap <silent> ,p :let @" = join(readfile(clip_file, "b"), "\n")<CR>
+
+set rtp+=~/.fzf
