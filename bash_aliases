@@ -32,7 +32,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 # Use fd for fzf
 FZF_FIND='fd'
-FZF_PARAMS='--hidden --exclude .git --exclude .hg --exclude /home/greg/.cache'
+FZF_PARAMS='--hidden --exclude .git --exclude .hg --exclude .cache'
 
 export FZF_DEFAULT_COMMAND="$FZF_FIND --type f $FZF_PARAMS"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
