@@ -16,8 +16,8 @@ if [ -z $SSH_AUTH_SOCK ]; then
 fi
 
 export HISTCONTROL=ignoredups:erasedups
-export HISTSIZE=10000000
-export HISTFILESIZE=10000000
+export HISTSIZE=-1
+export HISTFILESIZE=-1
 shopt -s histappend
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
