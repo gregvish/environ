@@ -11,7 +11,7 @@ set tabstop=4
 set shiftwidth=4
 set wildmode=longest,list
 
-set autochdir
+" set autochdir
 set tags=tags;
 
 highlight UnwantedSpaces ctermbg=red guibg=red

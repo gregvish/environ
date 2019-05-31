@@ -4,11 +4,6 @@ stty -ixon
 export EDITOR=vim
 
 export PATH=/opt/ctng/bin:$PATH
-export PATH=/opt/cross/mipsel-unknown-linux-uclibc/bin:$PATH
-export PATH=/opt/cross/mips-unknown-linux-uclibc/bin:$PATH
-export PATH=/opt/cross/arm-unknown-linux-uclibcgnueabi/bin:$PATH
-export PATH=/opt/cross/esp/esp/bin:$PATH
-
 export PATH=/opt/jdk/bin:/opt/jre/bin:$PATH
 export JAVA_HOME=/opt/jdk
 
@@ -21,12 +16,11 @@ if [ -z $SSH_AUTH_SOCK ]; then
 fi
 
 export HISTCONTROL=ignoredups:erasedups
-export HISTSIZE=100000
-export HISTFILESIZE=100000
+export HISTSIZE=-1
+export HISTFILESIZE=-1
 shopt -s histappend
 
 alias secvim='vim -u NONE -i NONE'
-alias aescat='openssl aes-256-cbc'
 alias l='ls -FC'
 alias ll='ls -FCl'
 alias la='ls -FCal'
@@ -34,3 +28,18 @@ alias demsg='dmesg -T'
 
 # HIDPI scale factor
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+# Use fd for fzf
+FZF_FIND='fd'
+FZF_PARAMS='--hidden --exclude .git --exclude .hg --exclude /home/greg/.cache'
+
+export FZF_DEFAULT_COMMAND="$FZF_FIND --type f $FZF_PARAMS"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_FIND --type d $FZF_PARAMS"
+
+_fzf_compgen_path() {
+  $FZF_FIND --type f $FZF_PARAMS . "$1"
+}
+_fzf_compgen_dir() {
+  $FZF_FIND --type d $FZF_PARAMS . "$1"
+}
