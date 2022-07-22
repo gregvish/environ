@@ -1,6 +1,8 @@
 #!/bin/bash
 stty -ixon
 
+export LANG=en_IL.UTF-8
+
 export EDITOR=vim
 
 export PATH=/opt/ctng/bin:$PATH
@@ -39,10 +41,11 @@ alias demsg='dmesg -T'
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash || \
+                      source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # Use fd for fzf
-FZF_FIND='fd'
+FZF_FIND='fdfind'
 FZF_PARAMS='--hidden --exclude .git --exclude .hg --exclude .cache'
 
 export FZF_DEFAULT_COMMAND="$FZF_FIND --type f $FZF_PARAMS"
