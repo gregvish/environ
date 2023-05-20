@@ -6,16 +6,11 @@ export LANG=en_IL.UTF-8
 export EDITOR=vim
 
 export PATH=/opt/ctng/bin:$PATH
-export PATH=/opt/go/bin:$PATH
-
-export JAVA_HOME=/opt/jdk
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 export ANDROID_HOME=/home/user/stuff/android
 export PATH=$ANDROID_HOME/tools/bin:$PATH
-
-export GOPATH=/home/user/go
-export PATH=$GOPATH/bin:$PATH
 
 export PATH=~/executables:$PATH
 

@@ -11,11 +11,11 @@ set tabstop=4
 set shiftwidth=4
 set wildmode=longest,list
 
-" set autochdir
+set autochdir
 set tags=tags;
 
 highlight UnwantedSpaces ctermbg=red guibg=red
-match UnwantedSpaces /\s\+\%#\@<!$\|^\t\+/
+match UnwantedSpaces /\s\+\%#\@<!$\|^\t\+\%#\@<!$/
 autocmd InsertLeave * redraw!
 
 if has("gui_running")
@@ -26,4 +26,7 @@ let clip_file = "/tmp/.my_clipboard"
 nmap <silent> ,y :call writefile(split(@", "\n"), clip_file, "b")<CR>
 nmap <silent> ,p :let @" = join(readfile(clip_file, "b"), "\n")<CR>
 
-set rtp+=~/.fzf
+set rtp+=/usr/share/doc/fzf/examples/
+set rtp+=/opt/fzf.vim/
+
+command! G call fzf#run(fzf#wrap({'source': 'git ls-files $(git rev-parse --show-toplevel)'}))
