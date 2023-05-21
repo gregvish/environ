@@ -11,7 +11,6 @@ set tabstop=4
 set shiftwidth=4
 set wildmode=longest,list
 
-set autochdir
 set tags=tags;
 
 highlight UnwantedSpaces ctermbg=red guibg=red
@@ -29,4 +28,4 @@ nmap <silent> ,p :let @" = join(readfile(clip_file, "b"), "\n")<CR>
 set rtp+=/usr/share/doc/fzf/examples/
 set rtp+=/opt/fzf.vim/
 
-command! G call fzf#run(fzf#wrap({'source': 'git ls-files $(git rev-parse --show-toplevel)'}))
+cd `findroot`
