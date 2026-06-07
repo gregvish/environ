@@ -5,12 +5,11 @@ export LANG=en_IL.UTF-8
 
 export EDITOR=vim
 
-export PATH=/opt/ctng/bin:$PATH
-export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/gradle-8.10.2/bin:$PATH
 
 export ANDROID_HOME=/home/user/stuff/android
-export PATH=$ANDROID_HOME/tools/bin:$PATH
+export PATH=$ANDROID_HOME/cmdline-tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 export PATH=~/executables:$PATH
 
